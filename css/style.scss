@@ -1,0 +1,82 @@
+//背景色
+$bg_with_1:#FAFAFA;
+$bg_with_2:#FFFFFF;
+$bg_balck:#FFFFFF;
+//主色
+$main_color:#E0473E;
+//辅色
+$auxiliary_color_FF:#FF9C09;
+$auxiliary_color_F3:#F38503;
+$auxiliary_color_CE:#CE0616;
+$auxiliary_color_2B:#2B99FF;
+//文字颜色
+$font_color_33:#333333;
+$font_color_66:#666666;
+$font_color_99:#999999;
+$font_color_ff:#ffffff;
+//边框
+$border_normal: 1px solid #999999;
+$border_none: 1px solid #C9C9C9;
+$border_hover: 1px solid #E0473E;
+//字体大小
+$font_10: 10px;
+$font_12: 12px;
+$font_14: 14px;
+$font_16: 16px;
+$font_18: 18px;
+$font_20: 20px;
+$font_22: 22px;
+//圆角
+$radius: 4px;
+//通用部分
+body{
+  font-size: 12px;
+}
+.template_btn_t1{
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+  line-height: 52px;
+  color: $font_color_66;
+  min-width: 159px;
+  border: $border_normal;
+  font-size: $font_16;
+  &:hover{
+    color: $main_color;
+    border: $border_hover;
+    transition: 0.15s;
+  }
+  &:focus{
+    color: $font_color_ff;
+    background: $main_color;
+    transition: 0.15s;
+  }
+}
+.template_btn_t2{
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+  min-width: 220px;
+  line-height: 44px;
+  font-size: $font_16;
+  border-radius: $radius;
+  color: $font_color_66;
+  border: $border_normal;
+  &:hover{
+    color: $main_color;
+    border: $border_hover;
+    transition: 0.15s;
+  }
+}
+.btn_none{
+  color: $font_color_66;
+  border: $border_none;
+  &:hover{
+    color: $font_color_66;
+    border: $border_none;
+  }
+}
+//头
+
+//尾
+
