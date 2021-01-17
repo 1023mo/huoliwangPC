@@ -2,6 +2,7 @@
 $bg_with_1:#FAFAFA;
 $bg_with_2:#FFFFFF;
 $bg_balck:#FFFFFF;
+$bg_34:#343638;
 //主色
 $main_color:#E0473E;
 //辅色
@@ -9,6 +10,8 @@ $auxiliary_color_FF:#FF9C09;
 $auxiliary_color_F3:#F38503;
 $auxiliary_color_CE:#CE0616;
 $auxiliary_color_2B:#2B99FF;
+$auxiliary_color_19:#1984E7;
+$auxiliary_color_C9:#C9C9C9;
 //文字颜色
 $font_color_33:#333333;
 $font_color_66:#666666;
@@ -32,6 +35,19 @@ $radius: 4px;
 body{
   font-size: 12px;
 }
+.bg_34{
+  background: $bg_34;
+}
+.bg_ff{
+  background: $bg_with_2;
+}
+.bg_E5{
+  background: #E5E5E5;
+}
+.template_pb{
+  padding-bottom: 40px;
+}
+//特殊按钮
 .template_btn_t1{
   display: inline-block;
   text-align: center;
@@ -68,15 +84,468 @@ body{
     transition: 0.15s;
   }
 }
+// 按钮颜色
+.template_btn_red{
+  color: $font_color_ff;
+  background: $main_color;
+  display: inline-block;
+  text-align: center;
+  &:focus{
+    color: $font_color_ff;
+    background: $auxiliary_color_CE;
+    transition: 0.15s;
+  }
+}
+.template_btn_blue{
+  background: $auxiliary_color_2B;
+  color: $font_color_ff;
+  display: inline-block;
+  text-align: center;
+  &:focus{
+    color: $font_color_ff;
+    background: $auxiliary_color_19;
+    transition: 0.15s;
+  }
+}
+.template_btn_orange{
+  background: $auxiliary_color_FF;
+  color: $font_color_ff;
+  display: inline-block;
+  text-align: center;
+  &:focus{
+    color: $font_color_ff;
+    background: $auxiliary_color_F3;
+    transition: 0.15s;
+  }
+}
+//按钮大小
+.template_btn_small{
+  width: 58px;
+  line-height: 26px;
+  font-size: $font_14;
+  border-radius: 50px;
+}
+.template_btn_large{
+  border-radius: 91px;
+  font-size: $font_16;
+  width: 108px;
+  line-height: 44px;
+}
+.template_btn_standard{
+  width: 295px;
+  line-height: 44px;
+  border-radius: 4px;
+  font-size: $font_16;
+}
+.template_btn_secondary{
+  width: 71px;
+  line-height: 34px;
+  border-radius: 28px;
+  font-size: $font_16;
+}
+//置灰
+.btn_disabled{
+  background: $font_color_99;
+  cursor: auto;
+  &:focus{
+    background: $font_color_99;
+  }
+}
 .btn_none{
   color: $font_color_66;
   border: $border_none;
+  cursor: auto;
   &:hover{
     color: $font_color_66;
     border: $border_none;
   }
 }
+//弹层通用
+.pop_mask{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.4);
+  left: 0;
+  top: 0;
+  .pop_content{
+    background: $bg_balck;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+  }
+}
+//页面内容宽度限制
+.content{
+  width: 1200px;
+  margin: 0 auto;
+}
 //头
 
 //尾
+.footer{
+  padding: 60px 0 30px;
+  color: #fff;
+  position: relative;
+  .tip_text{
+    color: $font_color_ff;
+    font-size: $font_12;
+    text-align: center;
+  }
+  .navigation{
+    p{
+      font-weight: bold;
+      font-size: $font_16;
+      margin-bottom: 15px;
+    }
+    li{
+      margin-bottom: 20px;
+    }
+    a{
+      color: $font_color_ff;
+      display: inline-block;
+      font-size: $font_14;
+      margin-right: 40px;
+    }
+    margin-bottom: 10px;
+  }
+  .mid{
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    font-size: 0;
+    >div{
+      display: inline-block;
+      img{
+        width: 116px;
+        display: block;
+        margin: 0 auto;
+      }
+      p{
+        color: $font_color_ff;
+        font-size: $font_16;
+        margin-top: 20px;
+      }
+    }
+    div:first-child{
+      margin-right: 65px;
+    }
+  }
+  .serve{
+    width: 166px;
+    .serve_text_1{
+      font-size: $font_14;
+      font-weight: bold;
+      margin-bottom: 35px;
+    }
+    .serve_text_1{
+      font-size: $font_14;
+      line-height: 21px;
+    }
+  }
+}
+//登陆
+.pop_sign{
+  width: 754px;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 0;
+  background: $main_color!important;
+  .sign_left{
+    color: $font_color_ff;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    padding: 180px 40px 110px 40px;
+    position: relative;
+    >img{
+      position: absolute;
+      top: 74px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+    >ul{
+      li{
+        font-size: 0;
+        img,div{
+          display: inline-block;
+          vertical-align: middle;
+        }
+        img{
+          margin-right: 14px;
+        }
+        div{
+          h3{
+            font-size: $font_14;
+            margin-bottom: 7px;
+          }
+          p{
+            font-size: $font_12;
+          }
+        }
+      }
+      li:not(:last-child){
+        margin-bottom: 45px;
+      }
+    }
+  }
+  .sign_right{
+    min-height: 521px;
+    box-sizing: border-box;
+    background: $font_color_ff;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    position: relative;
+    padding: 86px 94px 38px;
+    >img{
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      cursor:pointer;
+    }
+    .title>ul{
+      margin-bottom: 40px;
+      padding: 0 25px 0;
+      li{
+        font-size: $font_22;
+        color: $font_color_99;
+        cursor:pointer;
+      }
+      li.active{
+        color: $font_color_33;
+        cursor: auto;
+      }
+    }
+    .sign_content{
+      width: 328px;
+      .currency{
+        margin-bottom: 60px;
+        li:not(:last-child){
+          margin-bottom: 40px;
+        }
+        li{
+          border-radius: $radius;
+          position: relative;
+          p,a{
+            color: $main_color;
+            font-size: $font_12;
+          }
+          .right_top{
+            position: absolute;
+            right: 0;
+            top: -22px;
+          }
+          .left_bottom{
+            position: absolute;
+            left: 0;
+            bottom: -22px;
+          }
+          .riht_bottom{
+            position: absolute;
+            right: 0;
+            color: $auxiliary_color_2B;
+            bottom: -22px;
+            cursor:pointer;
+          }
+          .border_solide{
+            border: $border_none;
+            border-radius: $radius;
+            font-size: 0;
+            padding: 11px 20px 11px 17px;
+            img,span,input{
+              display: inline-block;
+              vertical-align: middle;
+            }
+            input{
+              font-size: $font_14;
+              color: $font_color_99;
+              height: $font_16;
+              width: 220px;
+            }
+            span,a{
+              font-size: $font_14;
+              color: $font_color_33;
+              margin-right: 10px;
+              margin-left: 4px;
+            }
+          }
+          input::-webkit-input-placeholder {
+            color: #999999;
+          }
+          input::-moz-placeholder {
+            color: #999999;
+          }
+          input:-moz-placeholder {
+            color: #999999;
+          }
+          input:-ms-input-placeholder {
+            color: #999999;
+          }
+          .swich_type{
+            display: inline-block;
+            vertical-align: middle;
+          }
+        }
+        .template_case{
+          >div{
+            position: relative;
+            div>img{
+              margin-right: 11px;
+            }
+            >img{
+              margin-right: 11px;
+            }
+            input{
+              width: 240px;
+            }
+            .swich_type{
+              cursor:pointer;
+              position: absolute;
+              right: 11px;
+              top: 50%;
+              -webkit-transform: translateY(-50%);
+              -moz-transform: translateY(-50%);
+              -ms-transform: translateY(-50%);
+              -o-transform: translateY(-50%);
+              transform: translateY(-50%);
+              img:last-child{
+                display: none!important;
+              }
+              img:first-child{
+                display: block!important;
+              }
+            }
+            .swich_type.active{
+              img:last-child{
+                display: block!important;
+              }
+              img:first-child{
+                display: none!important;
+              }
+            }
+          }
+        }
+        .seend_case{
+          .border_solide{
+            box-sizing: border-box;
+            width: 186px;
+            input{
+              width: 110px;
+            }
+          }
+          .template_btn_red{
+            color: $font_color_ff;
+            font-size: $font_14;
+            width: 116px;
+          }
+        }
+      }
+    }
+    .template_btn_red{
+      width: 100%;
+    }
+    .btn_disabled{
+      background: $auxiliary_color_C9;
+    }
+    .wechat{
+      margin-top: 23px;
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 22px;
+      cursor:pointer;
+      p{
+        margin-top: 5px;
+        font-size: $font_12;
+        color: $font_color_66;
+      }
+    }
+    .tip_text{
+      margin-top: 30px;
+      color: $font_color_66;
+      font-size: $font_14;
+      padding-left: 0px;
+      position: relative;
+      img{
+        position: absolute;
+        left: -9px;
+      }
+      p{
+        position: relative;
+        left: 20px;
+        a{
+          color: $auxiliary_color_2B;
+        }
+      }
+    }
+  }
+  .success_case,.wechat_case{
+    background: $bg_balck;
+    min-height: 521px;
+    position: relative;
+    padding: 116px 0px 128px;
+    text-align: center;
+    box-sizing: border-box;
+    .subtitle{
+      font-weight: bold;
+      font-size: $font_22;
+      margin-bottom: 45px;
+    }
+  }
+  .success_case .tip_text{
+    font-size: $font_18;
+    color: $font_color_33;
+    margin-top: 49px;
+    span{
+      color: $main_color;
+    }
+  }
+  .wechat_case .tip_text{
+    font-size: $font_14;
+    color: $font_color_66;
+    margin-top: 49px;
+  }
+  .colse_pop{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    cursor:pointer
+  }
+}
+// 协议
+.agreement{
+  padding: 33px 20px 18px;
+  >p{
+    text-align: center;
+    font-size: $font_color_33;
+    margin-bottom: 20px;
+    font-size: $font_20;
+    font-weight: bold;
+  }
+  ul{
+    li{
+      color: $font_color_33;
+      font-size: $font_14;
+      line-height: 21px;
+      p,h3{
+        margin-bottom: 30px;
+        display: block;
+      }
+    }
+  }
+}
 
