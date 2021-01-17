@@ -17,6 +17,7 @@ $font_color_33:#333333;
 $font_color_66:#666666;
 $font_color_99:#999999;
 $font_color_ff:#ffffff;
+$font_color_64:#646464;
 //边框
 $border_normal: 1px solid #999999;
 $border_none: 1px solid #C9C9C9;
@@ -43,6 +44,9 @@ body{
 }
 .bg_E5{
   background: #E5E5E5;
+}
+.bg_with_1{
+  background: $bg_with_1;
 }
 .template_pb{
   padding-bottom: 40px;
@@ -548,4 +552,208 @@ body{
     }
   }
 }
-
+// 首页
+.index_banner{
+  img{
+    width: 100%;
+  }
+  .swiper-pagination-bullet{
+    background: rgba(255, 255, 255, 0.4);
+    width: 14px;
+    height: 14px;
+    margin: 0 7px 0!important;
+  }
+  .swiper-pagination-bullet-active{
+    background: rgba(255, 255, 255, 1);
+    width: 40px;
+    height: 14px;
+    border-radius: 29px;
+  }
+}
+.index_descriptive{
+  padding: 20px 0 20px;
+  ul{
+    font-size: 0;
+    li{
+      display: inline-block;
+      vertical-align: middle;
+      width: 25%;
+      text-align: center;
+      h3{
+        color: $main_color;
+        font-size: $font_18;
+        margin-bottom: 10px;
+      }
+      p{
+        color: $font_color_64;
+        line-height: 21px;
+        font-size: $font_14;
+      }
+    }
+  }
+}
+.template_index_title{
+  text-align: center;
+  h2{
+    margin-bottom: 18px;
+    font-size: $font_22;
+    color: $font_color_33;
+    margin-bottom: 18px;
+  }
+  p{
+    color: $font_color_66;
+    font-size: $font_14;
+    line-height: 21px;
+  }
+}
+.index_map{
+  padding: 72px 0 88px;
+  ul{
+    margin-top: 94px;
+    margin-bottom: 80px;
+    font-size: 0;
+    li:not(:last-child){
+        margin-right: 2%;
+    }
+    li{
+      width: 18.4%;
+      display: inline-block;
+      vertical-align: middle;
+      img{
+        width: 100%;
+        height: 330px;
+      }
+      p{
+        background: $main_color;
+        color: $font_color_ff;
+        font-size: $font_16;
+        text-align: center;
+        padding: 42px 0;
+        line-height: 30px;
+      }
+    }
+  }
+}
+.index_bg_img_1{
+  background: url(../imges/index_bg_1.svg) center center no-repeat;
+}
+.index_bg_img_2{
+  background: url(../imges/index_bg_2.svg) center center no-repeat;
+}
+.template_index_tool{
+  padding: 70px 0 200px;
+  img{
+    display: block;
+    margin: 95px auto 0;
+  }
+}
+.template_index_potential_1{
+  padding: 70px 0 130px;
+  h2,p{
+    color: $font_color_ff;
+  }
+}
+.template_index_potential_2{
+  padding-top: 75px;
+  padding-bottom: 83px;
+}
+.template_index_bank{
+  padding: 70px 0 60px;
+  img{
+    display: block;
+    margin: 60px auto 0;
+  }
+}
+.template_index_dynamic{
+  box-sizing: border-box;
+  padding: 70px 70px 80px;
+  .template_index_title>p{
+    text-align: left;
+  }
+  .dynamic_content{
+    margin-top: 40px;
+    font-size: 0;
+    .dynamic_title,.dynamic_body{
+      display: inline-block;
+      vertical-align: top;
+    }
+    .dynamic_title{
+      width: 47%;
+      margin-right: 2%;
+      img{
+        width: 100%;
+      }
+      h3{
+        margin-top: 22px;
+        color: $font_color_33;
+        font-size: $font_16;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+        width: 100%;
+      }
+      p{
+        margin-top: 10px;
+        font-size: $font_14;
+        color: $font_color_64;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+        width: 100%;
+      }
+    }
+    .dynamic_body{
+      width: 51%;
+      li:not(:first-child){
+        padding-top: 24px;
+      }
+      li{
+        .left_content{
+          display: inline-block;
+          vertical-align: top;
+          text-align: center;
+          padding: 6px 0 6px;
+          width: 70px;
+          margin-right: 28px;
+          background: $main_color ;
+          color: $font_color_ff;
+          h3{
+            font-size: $font_22;
+          }
+          p{
+            font-size: $font_14;
+          }
+        }
+        .right_content{
+          display: inline-block;
+          width: 440px;
+          h3{
+            font-size: $font_16;
+            color: $font_color_33;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+            margin-bottom: 15px;
+          }
+          p{
+            font-size: $font_14;
+            color: $font_color_64;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+          }
+        }
+        .solid_border{
+          width: 420px;
+          border-bottom: 0.5px dashed #C9C9C9;
+          margin-top: 24px;
+        }
+      }
+      li:first-child{
+        .left_content{
+          background: $auxiliary_color_CE;
+        }
+      }
+    }
+  }
+}
