@@ -13,12 +13,22 @@ body {
 .bg_with_1 {
   background: #FAFAFA; }
 
+.bg_with_3 {
+  background: #fafafa; }
+
 .template_pb {
   padding-bottom: 40px; }
 
 .auto_img {
   width: 100%;
   display: block; }
+
+.template_link {
+  color: #666666;
+  font-size: 12px; }
+  .template_link a {
+    font-size: 12px;
+    color: #666666; }
 
 .right_fidex {
   position: fixed;
@@ -75,10 +85,12 @@ body {
     color: #E0473E;
     border: 1px solid #E0473E;
     transition: 0.15s; }
-  .template_btn_t1:focus {
-    color: #ffffff;
-    background: #E0473E;
-    transition: 0.15s; }
+
+.template_btn_t1.active {
+  color: #ffffff;
+  background: #E0473E;
+  transition: 0.15s;
+  border-color: #E0473E; }
 
 .template_btn_t2 {
   display: inline-block;
