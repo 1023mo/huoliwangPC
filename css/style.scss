@@ -683,7 +683,7 @@ body{
       img{
         width: 100%;
       }
-      h3{
+      .href_link_title{
         margin-top: 22px;
         color: $font_color_33;
         font-size: $font_16;
@@ -691,8 +691,10 @@ body{
         text-overflow:ellipsis;
         white-space: nowrap;
         width: 100%;
+        font-weight: bold;
+        display: block;
       }
-      p{
+      .href_link_text{
         margin-top: 10px;
         font-size: $font_14;
         color: $font_color_64;
@@ -700,6 +702,7 @@ body{
         text-overflow:ellipsis;
         white-space: nowrap;
         width: 100%;
+        display: block;
       }
     }
     .dynamic_body{
@@ -719,6 +722,7 @@ body{
           color: $font_color_ff;
           h3{
             font-size: $font_22;
+            font-weight: normal;
           }
           p{
             font-size: $font_14;
@@ -727,20 +731,23 @@ body{
         .right_content{
           display: inline-block;
           width: 440px;
-          h3{
+          .href_link_title{
             font-size: $font_16;
             color: $font_color_33;
             overflow: hidden;
             text-overflow:ellipsis;
             white-space: nowrap;
             margin-bottom: 15px;
+            display: block;
+            font-weight: bold;
           }
-          p{
+          .href_link_text{
             font-size: $font_14;
             color: $font_color_64;
             overflow: hidden;
             text-overflow:ellipsis;
             white-space: nowrap;
+            display: block;
           }
         }
         .solid_border{

@@ -522,22 +522,25 @@ body {
       margin-right: 2%; }
       .template_index_dynamic .dynamic_content .dynamic_title img {
         width: 100%; }
-      .template_index_dynamic .dynamic_content .dynamic_title h3 {
+      .template_index_dynamic .dynamic_content .dynamic_title .href_link_title {
         margin-top: 22px;
         color: #333333;
         font-size: 16px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        width: 100%; }
-      .template_index_dynamic .dynamic_content .dynamic_title p {
+        width: 100%;
+        font-weight: bold;
+        display: block; }
+      .template_index_dynamic .dynamic_content .dynamic_title .href_link_text {
         margin-top: 10px;
         font-size: 14px;
         color: #646464;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        width: 100%; }
+        width: 100%;
+        display: block; }
     .template_index_dynamic .dynamic_content .dynamic_body {
       width: 51%; }
       .template_index_dynamic .dynamic_content .dynamic_body li:not(:first-child) {
@@ -552,25 +555,29 @@ body {
         background: #E0473E;
         color: #ffffff; }
         .template_index_dynamic .dynamic_content .dynamic_body li .left_content h3 {
-          font-size: 22px; }
+          font-size: 22px;
+          font-weight: normal; }
         .template_index_dynamic .dynamic_content .dynamic_body li .left_content p {
           font-size: 14px; }
       .template_index_dynamic .dynamic_content .dynamic_body li .right_content {
         display: inline-block;
         width: 440px; }
-        .template_index_dynamic .dynamic_content .dynamic_body li .right_content h3 {
+        .template_index_dynamic .dynamic_content .dynamic_body li .right_content .href_link_title {
           font-size: 16px;
           color: #333333;
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
-          margin-bottom: 15px; }
-        .template_index_dynamic .dynamic_content .dynamic_body li .right_content p {
+          margin-bottom: 15px;
+          display: block;
+          font-weight: bold; }
+        .template_index_dynamic .dynamic_content .dynamic_body li .right_content .href_link_text {
           font-size: 14px;
           color: #646464;
           overflow: hidden;
           text-overflow: ellipsis;
-          white-space: nowrap; }
+          white-space: nowrap;
+          display: block; }
       .template_index_dynamic .dynamic_content .dynamic_body li .solid_border {
         width: 420px;
         border-bottom: 0.5px dashed #C9C9C9;
