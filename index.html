@@ -168,7 +168,7 @@
         </ul>
     </div>
 </div>
-<div class="right_fidex">
+<div class="right_fidex" style="display: none">
     <ul>
         <li>
             <img src="imges/phone.svg" alt="">
@@ -204,6 +204,11 @@
         autoplay:1,//自动滚动
         loop:true,//循环
         speed:4000,//滚动速度
+    });
+    $(document).on("scroll", function (e) {
+        var top = $('.index_map').offset().top
+        if (top <  $(window).scrollTop()) $('.right_fidex').show();
+        else $('.right_fidex').hide();
     });
 </script>
 </body>

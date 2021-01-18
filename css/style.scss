@@ -845,9 +845,6 @@ body{
   }
   .curriculum_list{
     margin-top: 40px;
-    >li{
-      margin-bottom: 20px;
-    }
     .curriculum_title{
       font-size: 0;
       margin-bottom: 30px;
@@ -868,13 +865,15 @@ body{
       }
     }
     ol{
-      display: -webkit-flex;
-      display: flex;
-      justify-content:space-between;
+      font-size: 0;
       li{
         cursor:pointer;
-        width: 286px;
+        width: 24%;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 1.333%;
         background: $bg_with_2;
+        margin-bottom: 20px;
         .curriculum_content{
           padding: 10px;
           >a{
@@ -888,12 +887,24 @@ body{
               color: $main_color;
               font-size: $font_14;
             }
+            .over{
+              color: $font_color_99;
+            }
+            .load{
+              color: $auxiliary_color_FF;
+            }
+            .admission{
+              color: $auxiliary_color_2B;
+            }
             label{
               color: $font_color_66;
               font-size: $font_14;
             }
           }
         }
+      }
+      li:nth-child(4n+4) {
+        margin-right: 0;
       }
     }
   }
