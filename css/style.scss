@@ -67,6 +67,11 @@ body{
     color: $font_color_66;
   }
 }
+//页面内容宽度限制
+.content{
+  width: 1200px;
+  margin: 0 auto;
+}
 //右侧固定
 .right_fidex{
   position: fixed;
@@ -254,11 +259,6 @@ body{
     -o-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
   }
-}
-//页面内容宽度限制
-.content{
-  width: 1200px;
-  margin: 0 auto;
 }
 //头
 
@@ -830,6 +830,69 @@ body{
       li:first-child{
         .left_content{
           background: $auxiliary_color_CE;
+        }
+      }
+    }
+  }
+}
+//栗学院
+.college_content{
+  padding-top: 10px;
+  .select_type{
+    padding-top: 15px;
+    text-align: center;
+    font-size: 0;
+  }
+  .curriculum_list{
+    margin-top: 40px;
+    >li{
+      margin-bottom: 20px;
+    }
+    .curriculum_title{
+      font-size: 0;
+      margin-bottom: 30px;
+      span,label{
+        display: inline-block;
+        vertical-align: middle;
+      }
+      span{
+        width: 6px;
+        height: 24px;
+        background: $main_color;
+        margin-right: 10px;
+      }
+      label{
+        font-size: $font_18;
+        color: $font_color_33;
+        font-weight: bold;
+      }
+    }
+    ol{
+      display: -webkit-flex;
+      display: flex;
+      justify-content:space-between;
+      li{
+        cursor:pointer;
+        width: 286px;
+        background: $bg_with_2;
+        .curriculum_content{
+          padding: 10px;
+          >a{
+            min-height: 60px;
+            font-size: $font_16;
+            color: $font_color_33;
+            display: block;
+          }
+          >div{
+            span{
+              color: $main_color;
+              font-size: $font_14;
+            }
+            label{
+              color: $font_color_66;
+              font-size: $font_14;
+            }
+          }
         }
       }
     }

@@ -30,6 +30,10 @@ body {
     font-size: 12px;
     color: #666666; }
 
+.content {
+  width: 1200px;
+  margin: 0 auto; }
+
 .right_fidex {
   position: fixed;
   right: 0;
@@ -192,10 +196,6 @@ body {
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
-
-.content {
-  width: 1200px;
-  margin: 0 auto; }
 
 .footer {
   padding: 60px 0 30px;
@@ -642,5 +642,52 @@ body {
         margin-top: 24px; }
       .template_index_dynamic .dynamic_content .dynamic_body li:first-child .left_content {
         background: #CE0616; }
+
+.college_content {
+  padding-top: 10px; }
+  .college_content .select_type {
+    padding-top: 15px;
+    text-align: center;
+    font-size: 0; }
+  .college_content .curriculum_list {
+    margin-top: 40px; }
+    .college_content .curriculum_list > li {
+      margin-bottom: 20px; }
+    .college_content .curriculum_list .curriculum_title {
+      font-size: 0;
+      margin-bottom: 30px; }
+      .college_content .curriculum_list .curriculum_title span, .college_content .curriculum_list .curriculum_title label {
+        display: inline-block;
+        vertical-align: middle; }
+      .college_content .curriculum_list .curriculum_title span {
+        width: 6px;
+        height: 24px;
+        background: #E0473E;
+        margin-right: 10px; }
+      .college_content .curriculum_list .curriculum_title label {
+        font-size: 18px;
+        color: #333333;
+        font-weight: bold; }
+    .college_content .curriculum_list ol {
+      display: -webkit-flex;
+      display: flex;
+      justify-content: space-between; }
+      .college_content .curriculum_list ol li {
+        cursor: pointer;
+        width: 286px;
+        background: #FFFFFF; }
+        .college_content .curriculum_list ol li .curriculum_content {
+          padding: 10px; }
+          .college_content .curriculum_list ol li .curriculum_content > a {
+            min-height: 60px;
+            font-size: 16px;
+            color: #333333;
+            display: block; }
+          .college_content .curriculum_list ol li .curriculum_content > div span {
+            color: #E0473E;
+            font-size: 14px; }
+          .college_content .curriculum_list ol li .curriculum_content > div label {
+            color: #666666;
+            font-size: 14px; }
 
 /*# sourceMappingURL=style.css.map */
