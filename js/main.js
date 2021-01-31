@@ -8,3 +8,6 @@ $('.go_top').click(function () {
         scrollTop: 0
     }, 500);
 })
+$('.header-menu span').click(function() {
+    $(this).addClass('active').siblings().removeClass('active')
+})
