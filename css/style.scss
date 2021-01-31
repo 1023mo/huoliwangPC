@@ -251,6 +251,7 @@ body{
   border-radius: 91px;
   font-size: $font_16;
   width: 108px;
+  height: 44px;
   line-height: 44px;
 }
 .template_btn_standard{
@@ -302,8 +303,41 @@ body{
     transform: translate(-50%,-50%);
   }
 }
-//头
-
+//头部
+.header {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  justify-content: center;
+  .header-menu {
+    line-height: 70px;
+    .icon {
+      width: 156px;
+      height: 56px;
+      margin-right: 27px;
+    }
+    span {
+      width: 140px;
+      font-size: 18px;
+      cursor: pointer;
+      line-height: 70px;
+      text-align: center;
+      display: inline-block;
+    }
+    .active {
+      color: #fff;
+      background: $main_color;
+    }
+  }
+  .login-register-btns {
+    font-size: 16px;
+  }
+}
 //尾
 .footer{
   padding: 60px 0 30px;
