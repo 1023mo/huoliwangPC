@@ -6,7 +6,7 @@ $('.colse_pop').click(function () {
 $('.go_top').click(function () {
     $("html,body").animate({
         scrollTop: 0
-    }, 500);
+    }, 500)
 })
 $('.header-menu span').click(function() {
     $(this).addClass('active').siblings().removeClass('active')
