@@ -316,9 +316,7 @@ body{
   justify-content: center;
   .header-menu {
     line-height: 70px;
-    .icon {
-      width: 156px;
-      height: 56px;
+    img {
       margin-right: 27px;
     }
     span {
@@ -336,6 +334,16 @@ body{
   }
   .login-register-btns {
     font-size: 16px;
+    line-height: 70px;
+    margin: 0 30px 0 102px;
+  }
+  .avatar {
+    display: none;
+    line-height: 70px;
+    margin: 0 50px 0 65px;
+    span {
+      font-size: 16px;
+    }
   }
 }
 //尾
@@ -782,10 +790,10 @@ body{
   }
 }
 .index_bg_img_1{
-  background: url(../imges/index_bg_1.svg) center center no-repeat;
+  background: url(../images/index_bg_1.svg) center center no-repeat;
 }
 .index_bg_img_2{
-  background: url(../imges/index_bg_2.svg) center center no-repeat;
+  background: url(../images/index_bg_2.svg) center center no-repeat;
 }
 .template_index_tool{
   padding: 70px 0 200px;
@@ -1072,7 +1080,7 @@ body{
               li{
                 margin-bottom: 10px ;
                 padding-left: 30px;
-                background: url(../imges/icon_pa.svg) left center no-repeat;
+                background: url(../images/icon_pa.svg) left center no-repeat;
               }
             }
           }
@@ -1154,12 +1162,12 @@ body{
     .swiper-button-next{
       right: 22px;
       position: absolute;
-      background: url(../imges/icon_right.svg) center center no-repeat;
+      background: url(../images/icon_right.svg) center center no-repeat;
     }
     .swiper-button-prev{
       left: 22px;
       position: absolute;
-      background: url(../imges/icon_left.svg) center center no-repeat;
+      background: url(../images/icon_left.svg) center center no-repeat;
     }
   }
 }
