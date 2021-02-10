@@ -303,6 +303,12 @@ body{
     transform: translate(-50%,-50%);
   }
 }
+//公用居中显示
+.flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 //头部
 .header {
   position: absolute;
@@ -310,11 +316,9 @@ body{
   left: 0%;
   right: 0%;
   height: 70px;
-  display: flex;
-  align-items: center;
   background: #FFFFFF;
-  justify-content: center;
   .header-menu {
+    height: 70px;
     line-height: 70px;
     img {
       margin-right: 27px;
@@ -1169,5 +1173,20 @@ body{
       position: absolute;
       background: url(../images/icon_left.svg) center center no-repeat;
     }
+  }
+}
+// 服务商城
+.store-banner {
+  width: 100%;
+  margin-top: 70px;
+}
+.store {
+  background: #E5E5E5;
+  .bread_menu {
+    width: 1200px;
+    margin: 20px 0 17px;
+  }
+  a,span {
+    color: #666666;
   }
 }
