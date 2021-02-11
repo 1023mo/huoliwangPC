@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <meta charset="UTF-8">
     <title>火栗网</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-</head>
+  </head>
   <body>
     <div class="header_case">
       <section class="header flex_center">
@@ -34,7 +34,9 @@
     <script src="http://at.alicdn.com/t/font_2361919_fhrk7dqqwn.js"></script>
     <script src="js/jquery-1.12.2.min.js"></script>
     <script>
-
+      $('.header-menu span').click(function() {
+        $(this).addClass('active').siblings().removeClass('active')
+      })
     </script>
   </body>
 </html>
