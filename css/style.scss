@@ -1176,6 +1176,11 @@ body{
     }
   }
 }
+//公用font-size:14px，line-height：21px;
+.font_size_14 {
+  font-size: 14px;
+  line-height: 21px;
+}
 // 服务商城
 .store-banner {
   width: 100%;
@@ -1183,11 +1188,162 @@ body{
 }
 .store {
   background: #E5E5E5;
+  flex-direction: column;
   .bread_menu {
     width: 1200px;
     margin: 20px 0 17px;
+    a,span {
+      color: #666666;
+    }
   }
-  a,span {
-    color: #666666;
+  .store_product {
+    display: flex;
+    width: 1200px;
+    .course_list {
+      width: 792px;
+      height: 187px;
+      display: flex;
+      background: #FFFFFF;
+      margin: 0 39px 10px 0;
+      padding: 20px 20px 22px;
+      justify-content: space-between;
+      .course_title {
+        font-size: 18px;
+        color: #333333;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .left_content:hover {
+        .normal_content {
+          display: none;
+        }
+        .hover_content {
+          display: block;
+        }
+      }
+      .normal_content {
+        display: flex;
+        margin-right: 99px;
+        p {
+          font-size: 16px;
+          color: #666666;
+          line-height: 24px;
+          margin-left: 15px;
+        }
+        
+      }
+      .hover_content {
+        display: none;
+        div {
+          line-height: 18px;
+          text-align: center;
+          margin-right: 40px;
+          display: inline-block;
+        }
+      }
+      .course_right {
+        p,a {
+          text-align: center;
+        }
+        .price {
+          font-size: 20px;
+          font-weight: bold;
+          line-height: 30px;
+          margin: 14px 0 34px;
+          color: $auxiliary_color_FF;
+        }
+        .validity {
+          color: #666666;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  .my_account {
+    width: 372px;
+    height: 652px;
+    padding: 20px;
+    background: #fff;
+    .btn {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    p {
+      color: #333333;
+    }
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 27px;
+      margin-bottom: 20px;
+    }
+    .second_title {
+      margin: 40px 0 0;
+    }
+    .user_status {
+      height: 60px;
+      padding-left: 76px;
+      background: url('../imagesPng/Avatar5.png') left center no-repeat;
+      background-size: 60px 60px;
+      .not_login {
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 10px;
+        &:hover{
+          color: #E0473E;
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+    .balance_title {
+      padding-top: 18px;
+      p:not(:first-child) {
+        color: #666;
+        font-size: 16px;
+        line-height: 24px;
+      }
+      p:first-child {
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+    .balance_title,.balance_count {
+      width: 332px;
+      display: flex;
+      p:first-child {
+        flex: 1;
+      }
+      p:nth-child(2) {
+        margin-right: 10px;
+      }
+    }
+    .balance_count {
+      padding-bottom: 34px;
+    }
+    ul {
+      margin: 14px 0;
+      li {
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: 10px;
+      }
+    }
+    .info {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 54px;
+      justify-content: space-between;
+      p {
+        width: 166px;
+        color: #fff;
+        line-height: 40px;
+        text-align: center;
+        border: 1px solid #FFFFFF;
+        background: rgba(224, 71, 62, 0.8);
+      }
+    }
   }
 }
