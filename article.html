@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div id="header"></div>
 <img class="auto_img" src="images/good_banner.svg" alt="">
 <div class="bg_with_3">
     <div class="content college_content template_pb">
@@ -356,9 +357,12 @@
     <img src="images/ok_default.svg" alt="">
     <p>发布成功</p>
 </div>
+<div id="footer"></div>
 <script src="js/jquery-1.12.2.min.js"></script>
 <script src="js/main.js"></script>
 <script>
+    $('#header').load('./header.html');
+    $('#footer').load('./footer.html');
     // 文章点赞
     $('.thumbs').click(function () {
         $(this).toggleClass('active')

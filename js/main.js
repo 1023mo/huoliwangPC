@@ -11,3 +11,10 @@ $('.go_top').click(function () {
 $('.header-menu span').click(function() {
     $(this).addClass('active').siblings().removeClass('active')
 })
+// 头尾引入
+if ($('#header').length){
+    $('#header').load('./header.html');
+}
+if ($('#footer').length){
+    $('#footer').load('./footer.html');
+}
