@@ -107,67 +107,77 @@
                         <h3>评论</h3>
                         <i>（25条）</i>
                     </div>
-                    <ul>
-                        <li>
-                            <div class="comment_main">
-                               <img src="images/hader.svg" alt="">
-                               <div>
-                                   <p class="msg_case clearfix">
-                                       <span class="name fl">王大锤</span>
-                                       <label class="time fr" for="">2020.11.11  16:22</label>
-                                   </p>
-                                   <p class="comment_content">真心不错，真心不错，真心不错，真心不错，真心不错，真心不错，真心不错，真心不错，真心不错，讲的很有道理。</p>
-                                   <div class="comment_msg">
-                                       <p>
-                                           <img  src="images/dianzan_default_2.svg"  alt="">
-                                           <span>100</span>
-                                       </p>
-                                       <a onclick="handReplyComment(this)" href="javascript:;">回复</a>
-                                   </div>
-                                   <ol class="comment_reply">
-                                       <li>
-                                           <div>
-                                               <label>王消：</label>
-                                               <span>enen</span>
-                                           </div>
-                                       </li>
-                                       <li>
-                                           <div>
-                                               <label>张可可</label>
-                                               <span>回复</span>
-                                               <label>王消：</label>
-                                               <span>真不错，真不错，真不错。真不错，真不错，真不错。</span>
-                                           </div>
-                                           <span onclick="handDeleteComment(this)">删除</span>
-                                       </li>
-                                   </ol>
-                               </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="comment_main">
-                                <img src="images/hader.svg" alt="">
-                                <div>
-                                    <p class="msg_case clearfix">
-                                        <span class="name fl">王大锤</span>
-                                        <label class="time fr" for="">2020.11.11  16:22</label>
-                                    </p>
-                                    <p class="comment_content">真心不错，真心不错，真心不错，真心不错，真心不错，真心不错，真心不错，真心不错，真心不错，讲的很有道理。</p>
-                                    <div class="comment_msg">
-                                        <p>
-                                            <img  src="images/dianzan_default_2.svg"  alt="">
-                                            <span>100</span>
+                    <!--有评论-->
+                    <div>
+                        <ul>
+                            <li>
+                                <div class="comment_main">
+                                    <img src="images/hader.svg" alt="">
+                                    <div>
+                                        <p class="msg_case clearfix">
+                                            <span class="name fl">王大锤</span>
+                                            <label class="time fr" for="">2020.11.11  16:22</label>
                                         </p>
-                                        <a onclick="handReplyComment(this)" href="javascript:;">回复</a>
+                                        <p class="comment_content">真心不错，真心不错，真心不错，真心不错，真心不错，真心不错，真心不错，真心不错，真心不错，讲的很有道理。</p>
+                                        <div class="comment_msg">
+                                            <p onclick="handDZComment(this)">
+                                                <img class="default" src="images/dianzan_default_2.svg"  alt="">
+                                                <img class="active" src="images/dianzan_select_2.svg"  alt="">
+                                                <span>100</span>
+                                            </p>
+                                            <a onclick="handReplyComment(this)" href="javascript:;">回复</a>
+                                        </div>
+                                        <ol class="comment_reply">
+                                            <li>
+                                                <div>
+                                                    <label>王消：</label>
+                                                    <span>enen</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <label>张可可</label>
+                                                    <span>回复</span>
+                                                    <label>王消：</label>
+                                                    <span>真不错，真不错，真不错。真不错，真不错，真不错。</span>
+                                                </div>
+                                                <span onclick="handDeleteComment(this)">删除</span>
+                                            </li>
+                                        </ol>
                                     </div>
-                                    <ol class="comment_reply" style="display: none">
-                                    </ol>
                                 </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <div style="text-align: center">
-                        <a onclick="handLoadMore(this)" class="template_btn_t2" href="javascript:;">点击加载更多</a>
+                            </li>
+                            <li>
+                                <div class="comment_main">
+                                    <img src="images/hader.svg" alt="">
+                                    <div>
+                                        <p class="msg_case clearfix">
+                                            <span class="name fl">王大锤</span>
+                                            <label class="time fr" for="">2020.11.11  16:22</label>
+                                        </p>
+                                        <p class="comment_content">真心不错，真心不错，真心不错，真心不错，真心不错，真心不错，真心不错，真心不错，真心不错，讲的很有道理。</p>
+                                        <div class="comment_msg">
+                                            <p onclick="handDZComment(this)">
+                                                <img class="default" src="images/dianzan_default_2.svg"  alt="">
+                                                <img class="active" src="images/dianzan_select_2.svg"  alt="">
+                                                <span>100</span>
+                                            </p>
+                                            <a onclick="handReplyComment(this)" href="javascript:;">回复</a>
+                                        </div>
+                                        <ol class="comment_reply" style="display: none">
+                                        </ol>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div style="text-align: center">
+                            <a onclick="handLoadMore(this)" class="template_btn_t2" href="javascript:;">点击加载更多</a>
+                        </div>
+                    </div>
+                    <!--无评论-->
+                    <div class="comment_none"  style="display: none">
+                        <img src="./images/icon_none_text.svg" alt="">
+                        <p>暂无评论</p>
                     </div>
                 </div>
                 <div style="padding-top: 40px">
@@ -264,49 +274,49 @@
                 </div>
                 <ul class="hot_text_list">
                     <li>
-                        <p class="hot_list_title">商业银行不良资产处置尽调之保证金账户保证金</p>
+                        <a class="hot_list_title">商业银行不良资产处置尽调之保证金账户保证金</a>
                         <div class="hot_list_text clearfix">
                             <span class="hot_text_left fl">不良王子 | 399999热度</span>
                             <i class="hot_text_riht fr">昨天</i>
                         </div>
                     </li>
                     <li>
-                        <p class="hot_list_title">商业银行不良资产处置尽调之保证金账户保证金</>
+                        <a class="hot_list_title">商业银行不良资产处置尽调之保证金账户保证金</>
                         <div class="hot_list_text clearfix">
                             <span class="hot_text_left fl">不良王子 | 399999热度</span>
                             <i class="hot_text_riht fr">2020.12.22 </i>
                         </div>
                     </li>
                     <li>
-                        <p class="hot_list_title">商业银行不良资产处置尽调之保证金账户保证金商业银行不良资产处置尽调之保证金账户保证金金…</p>
+                        <a class="hot_list_title">商业银行不良资产处置尽调之保证金账户保证金商业银行不良资产处置尽调之保证金账户保证金金…</a>
                         <div class="hot_list_text clearfix">
                             <span class="hot_text_left fl">不良王子 | 3热度</span>
                             <i class="hot_text_riht fr">10小时前</i>
                         </div>
                     </li>
                     <li>
-                        <p class="hot_list_title">商业银行不良资产处置尽调之保证金账户保证金商业银行不良资产处置尽调之保证金账户保证金金…</p>
+                        <a class="hot_list_title">商业银行不良资产处置尽调之保证金账户保证金商业银行不良资产处置尽调之保证金账户保证金金…</a>
                         <div class="hot_list_text clearfix">
                             <span class="hot_text_left fl">不良王子 | 3热度</span>
                             <i class="hot_text_riht fr">10小时前</i>
                         </div>
                     </li>
                     <li>
-                        <p class="hot_list_title">商业银行不良资产处置尽调之保证金账户保证金商业银行不良资产处置尽调之保证金账户保证金金…</p>
+                        <a class="hot_list_title">商业银行不良资产处置尽调之保证金账户保证金商业银行不良资产处置尽调之保证金账户保证金金…</a>
                         <div class="hot_list_text clearfix">
                             <span class="hot_text_left fl">不良王子 | 3热度</span>
                             <i class="hot_text_riht fr">10小时前</i>
                         </div>
                     </li>
                     <li>
-                        <p class="hot_list_title">商业银行不良资产处置尽调之保证金账户保证金商业银行不良资产处置尽调之保证金账户保证金金…</p>
+                        <a class="hot_list_title">商业银行不良资产处置尽调之保证金账户保证金商业银行不良资产处置尽调之保证金账户保证金金…</a>
                         <div class="hot_list_text clearfix">
                             <span class="hot_text_left fl">不良王子 | 3热度</span>
                             <i class="hot_text_riht fr">10小时前</i>
                         </div>
                     </li>
                     <li>
-                        <p class="hot_list_title">商业银行不良资产处置尽调之保证金账户保证金商业银行不良资产处置尽调之保证金账户保证金金…</p>
+                        <a class="hot_list_title">商业银行不良资产处置尽调之保证金账户保证金商业银行不良资产处置尽调之保证金账户保证金金…</a>
                         <div class="hot_list_text clearfix">
                             <span class="hot_text_left">不良王子 | 3热度</span>
                             <i class="hot_text_riht fr">10小时前</i>
@@ -332,11 +342,13 @@
     <li>
         <img  class="default" src="images/collect_default.svg" alt="">
         <img  class="hover" src="images/collect_hover.svg" alt="">
+        <img  class="select" src="images/collect_select.svg" alt="">
         <i>收藏</i>
     </li>
     <li>
         <img  class="default" src="images/dianzan_default.svg" alt="">
         <img  class="hover" src="images/dianzan_hover.svg" alt="">
+        <img  class="select" src="images/dianzan_select.svg" alt="">
         <i>点赞</i>
     </li>
 </ul>
@@ -344,12 +356,15 @@
     <img src="images/ok_default.svg" alt="">
     <p>发布成功</p>
 </div>
-<br><br><br><br><br><br><br><br><br><br>
 <script src="js/jquery-1.12.2.min.js"></script>
 <script src="js/main.js"></script>
 <script>
     // 文章点赞
     $('.thumbs').click(function () {
+        $(this).toggleClass('active')
+    });
+    // 左侧固定
+    $('.left_fidex').on('click','li',function () {
         $(this).toggleClass('active')
     });
     // 页面滚动到评论部分
@@ -427,10 +442,11 @@
                 '                                    </p>\n' +
                 '                                    <p class="comment_content">真心不错，真心不错，真心不错，真心不错，真心不错，真心不错，真心不错，真心不错，真心不错，讲的很有道理。</p>\n' +
                 '                                    <div class="comment_msg">\n' +
-                '                                        <p>\n' +
-                '                                            <img  src="images/dianzan_default_2.svg"  alt="">\n' +
-                '                                            <span>100</span>\n' +
-                '                                        </p>\n' +
+                '                                       <p onclick="handDZComment(this)">\n' +
+                '                                           <img class="default" src="images/dianzan_default_2.svg"  alt="">\n' +
+                '                                           <img class="active" src="images/dianzan_select_2.svg"  alt="">\n' +
+                '                                           <span>100</span>\n' +
+                '                                       </p>'+
                 '                                        <a onclick="handReplyComment(this)" href="javascript:;">回复</a>\n' +
                 '                                    </div>\n' +
                 '                                    <ol class="comment_reply" style="display: none">\n' +
@@ -463,10 +479,11 @@
                 $(that).parent().prev().val() +
                 '</p>\n' +
                 '                                    <div class="comment_msg">\n' +
-                '                                        <p>\n' +
-                '                                            <img  src="images/dianzan_default_2.svg"  alt="">\n' +
-                '                                            <span>0</span>\n' +
-                '                                        </p>\n' +
+                '                                       <p onclick="handDZComment(this)">\n' +
+                '                                           <img class="default" src="images/dianzan_default_2.svg"  alt="">\n' +
+                '                                           <img class="active" src="images/dianzan_select_2.svg"  alt="">\n' +
+                '                                           <span>100</span>\n' +
+                '                                       </p>'+
                 // '                                        <a onclick="handReplyComment(this)" href="javascript:;">回复</a>\n' +
                 '                                    </div>\n' +
                 '                                    <ol class="comment_reply" style="display: none">\n' +
@@ -476,7 +493,12 @@
                 '                        </li>'
             $(that).parent().prev().val('')
             $('.comment_list>ul').append(html)
+            showTip('发布成功')
         }
+    }
+    // 平路点赞
+    function handDZComment(that) {
+        $(that).toggleClass('active')
     }
 </script>
 </body>

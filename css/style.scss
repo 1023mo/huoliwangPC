@@ -181,6 +181,17 @@ body{
       font-size: $font_14;
       color: $font_color_33;
     }
+    .select{
+      display: none;
+    }
+  }
+  li.active,li.active:hover{
+    .default,.hover{
+      display: none;
+    }
+    .select{
+      display: inline-block!important;
+    }
   }
   li:hover{
     .default{
@@ -390,6 +401,12 @@ body{
     transform: translate(-50%,-50%);
   }
 }
+//公用居中显示
+.flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 //头部
 .header {
   position: absolute;
@@ -397,11 +414,9 @@ body{
   left: 0%;
   right: 0%;
   height: 70px;
-  display: flex;
-  align-items: center;
   background: #FFFFFF;
-  justify-content: center;
   .header-menu {
+    height: 70px;
     line-height: 70px;
     img {
       margin-right: 27px;
@@ -1444,7 +1459,7 @@ body{
       height: 10px;
       background: $main_color;
     }
-    li:first-child{
+    li:hover{
       .hot_list_title{
         color: $main_color;
       }
@@ -1681,6 +1696,17 @@ body{
       font-size: $font_14;
       padding-top: 6px;
     }
+    img.active{
+      display: none;
+    }
+    p.active{
+      .active{
+        display: inline-block;
+      }
+      .default{
+        display: none;
+      }
+    }
   }
   .comment_reply{
     padding: 10px 0 10px 10px;
@@ -1704,5 +1730,31 @@ body{
         top: 0;
       }
     }
+  }
+}
+.comment_none{
+  padding: 30px 0 0px;
+  margin-bottom: 0;
+  text-align: center;
+  p{
+    padding-top: 10px;
+    font-size: 18px;
+    line-height: 27px;
+    color: #333333;
+  }
+}
+// 服务商城
+.store-banner {
+  width: 100%;
+  margin-top: 70px;
+}
+.store {
+  background: #E5E5E5;
+  .bread_menu {
+    width: 1200px;
+    margin: 20px 0 17px;
+  }
+  a,span {
+    color: #666666;
   }
 }
