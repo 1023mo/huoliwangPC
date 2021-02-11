@@ -66,11 +66,8 @@ input:focus{
 a,div,p{-webkit-tap-highlight-color:rgba(255, 255, 255, 0);}
 body{-webkit-text-size-adjust:none;}
 /*设置默认字体 */
-
 body{
-	font-family: 'Roboto Condensed';
   	color: #333333;
-
 }
 /*重置firefox按钮样式*/
 button::-moz-focus-inner,
