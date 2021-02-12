@@ -90,9 +90,9 @@ body{
 }
 .problem_case{
   font-size: 16px;
-  color: $font_color_33;
   line-height: 24px;
   position: relative;
+  color: $font_color_33;
   .problem{
     span{
       color: $main_color;
@@ -332,6 +332,7 @@ body{
   color: $font_color_ff;
   display: inline-block;
   text-align: center;
+  cursor: pointer;
   &:focus{
     color: $font_color_ff;
     background: $auxiliary_color_F3;
@@ -354,6 +355,7 @@ body{
 }
 .template_btn_standard{
   width: 295px;
+  cursor: pointer;
   line-height: 44px;
   border-radius: 4px;
   font-size: $font_16;
@@ -382,13 +384,15 @@ body{
   }
 }
 //弹层通用
-.pop_mask{
-  position: fixed;
+.pay_mask,
+.detail_mask{
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  display: none;
+  position: fixed;
   background: rgba(51, 51, 51, 0.4);
-  left: 0;
-  top: 0;
   .pop_content{
     background: $bg_balck;
     position: absolute;
@@ -1275,8 +1279,12 @@ body{
 }
 //公用font-size:14px，line-height：21px;
 .font_size_14 {
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 14px !important;
+  line-height: 21px !important;
+}
+.font_size_16 {
+  font-size: 16px !important;
+  line-height: 24px !important;
 }
 //资讯干货
 .good_left{
@@ -1757,6 +1765,7 @@ body{
     margin: 20px 0 17px;
     a,span {
       color: #666666;
+      cursor: pointer;
     }
   }
   .store_product {
@@ -1767,7 +1776,7 @@ body{
       height: 187px;
       display: flex;
       background: #FFFFFF;
-      margin: 0 39px 10px 0;
+      margin: 0 40px 20px 0;
       padding: 20px 20px 22px;
       justify-content: space-between;
       .course_title {
@@ -1789,9 +1798,7 @@ body{
         display: flex;
         margin-right: 99px;
         p {
-          font-size: 16px;
           color: #666666;
-          line-height: 24px;
           margin-left: 15px;
         }
         
@@ -1809,7 +1816,7 @@ body{
         }
       }
       .course_right {
-        p,a {
+        p {
           text-align: center;
         }
         .price {
@@ -1825,6 +1832,21 @@ body{
         }
       }
     }
+    .all_info {
+      margin-bottom: 47px;
+      .problem_case {
+        .store_tips {
+          margin-bottom: 20px !important;
+        }
+        .problem {
+          font-weight: 500;
+          margin-bottom: 0 !important;
+        }
+        .answer span {
+          font-weight: 500;
+        }
+      }
+    } 
   }
   .my_account {
     width: 372px;
@@ -1854,8 +1876,6 @@ body{
       background-size: 60px 60px;
       .not_login {
         cursor: pointer;
-        font-size: 16px;
-        line-height: 24px;
         margin-bottom: 10px;
         &:hover{
           color: #E0473E;
@@ -1867,10 +1887,12 @@ body{
     }
     .balance_title {
       padding-top: 18px;
-      p:not(:first-child) {
+      .account_detail {
         color: #666;
-        font-size: 16px;
-        line-height: 24px;
+        cursor: pointer;
+        &:hover span {
+          color: #E0473E;
+        }
       }
       p:first-child {
         font-size: 16px;
@@ -1911,6 +1933,235 @@ body{
         border: 1px solid #FFFFFF;
         background: rgba(224, 71, 62, 0.8);
       }
+    }
+  }
+}
+// 金栗充值
+.pay_dialog {
+  width: 740px;
+  height: 484px;
+  padding: 40px;
+  overflow-y: hidden;
+  position: relative;
+  border-radius: 10px;
+  margin: 258px auto 0;
+  background: #FFFFFF;
+  >p {
+    font-size: 22px;
+    line-height: 33px;
+    font-weight: bold;
+  }
+  .icon {
+    top: 44px;
+    right: 40px;
+    cursor: pointer;
+    color: #363F4D;
+    font-size: 16.68px;
+    position: absolute;
+  }
+  .flex_between {
+    display: flex;
+    margin-top: 34px;
+    justify-content: space-between;
+    .title {
+      font-size: 18px;
+      line-height: 46px;
+    }
+  }
+  .total_prices {
+    margin: 22px 0 40px;
+    p {
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+  .discription {
+    color: #666666;
+    margin-bottom: 40px;
+  }
+}
+.account_input {
+  width: 160px;
+  display: flex;
+  line-height:44px;
+  border-radius: 4px;
+  background: #F7F9FA;
+  border: 0.5px solid #E0E0E0;
+  p {
+    width: 40px;
+    cursor: pointer;
+    text-align: center;
+  }
+  .account_number {
+    flex: 1;
+    width: 80px;
+    border-style: solid;
+    border-width: 0 1px;
+    border-color:#E0E0E0;
+  }
+}
+// 金栗明细
+.table_header,
+.table_content div {
+  display: flex;
+  border-bottom: 0.5px solid #C9C9C9;
+  span {
+    flex:1;
+    text-align: center;
+    padding: 20px 0 10px;
+    display: inline-block;
+  }
+}
+.table_header {
+  span {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+.table_body {
+  height: 300px;
+  overflow: auto;
+  .table_content {
+    span {
+      color: #666666;
+      padding-top: 10px;
+    }
+  }
+}
+// 订阅服务
+.subscription_service {
+  width: 792px;
+  height: 430px;
+  padding: 20px;
+  position: relative;
+  margin:0 40px 40px 0;
+  background: #FFFFFF;
+  .service_title {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: bold;
+  }
+  .flex_layout {
+    display: flex;
+    margin: 10px 0 45px;
+    img {
+      width: 232px;
+      height: 130px;
+    }
+    .content {
+      margin-left: 20px;
+      >p {
+        margin-bottom: 17px;
+      }
+      .service_detail {
+        width: 220px;
+        display: flex;
+        margin-bottom: 10px;
+        justify-content: space-between;
+        p {
+          font-size: 14px;
+          line-height: 21px;
+        }
+        .price {
+          color: #E0473E;
+        }
+        .account_input {
+          width: 80px !important;
+          line-height: 22px !important;
+          p:not(:nth-child(2)) {
+            width: 20px !important;
+          }
+        }
+      }
+    }
+  }
+  .swiper-container {
+    .swiper-wrapper {
+      width: 674px;
+      overflow: hidden;
+    }
+    .swiper-slide,.icon {
+      height: 60px;
+      position: relative;
+      width: 146px !important;
+    }
+    .active {
+      display: none;
+    }
+    .coupons {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      cursor: pointer;
+      position: absolute;
+      align-items: center;
+      padding: 0 18px 0 6px;
+      justify-content: space-between;
+      p,span {
+        font-size: 14px;
+        color: #E0473E;
+        font-weight: bold;
+        line-height: 21px;
+      }
+      p:first-child {
+        // margin-right: 16px;
+      }
+      .money_off {
+        color: #666;
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+    .swiper-button-prev {
+      left: 0 !important;
+      background-image: url('../imagesPng/icon/arrow_left.png') !important;
+      background-size: auto 23px;
+    }
+    .swiper-button-next {
+      right: 0 !important;
+      background-image: url('../imagesPng/icon/arrow_right.png') !important;
+      background-size: auto 23px;
+    }
+  }
+  .money {
+    display: flex;
+    margin-top: 69px;
+    justify-content: space-between;
+    p,span {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 44px;
+    }
+    span {
+      color: #E0473E;
+      margin-left: 20px;
+    }
+    a {
+      width: 140px;
+    }
+  }
+}
+.problem_case {
+  .service_tips {
+    margin-bottom: 10px !important;
+  }
+  .service_agreement {
+    margin-bottom: 40px !important;
+    .icon {
+      font-size: 18px;
+      line-height: 18px;
+      margin-right: 6px;
+    }
+    span {
+      color: #666;
+    }
+    a {
+      color: #0087ff;
+    }
+    span,a {
+      font-size: 14px;
     }
   }
 }
