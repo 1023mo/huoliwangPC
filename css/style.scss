@@ -429,12 +429,12 @@ body{
   z-index: 1000000000000000000;
 }
 .header {
-  width: 100%;
-  position: fixed;
   top: 0;
+  width: 100%;
   height: 70px;
-  z-index: 1000000000000000000;
+  position: fixed;
   background: #FFFFFF;
+  z-index: 1000000000000000000;
   .header-menu {
     height: 70px;
     line-height: 70px;
