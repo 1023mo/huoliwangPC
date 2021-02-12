@@ -978,7 +978,7 @@ body{
         :last-child{
           font-size: 16px;
           line-height: 24px;
-          color: #666;
+          color: $font_color_66;
         }
       }
     }
@@ -1859,7 +1859,7 @@ body{
     label{
       font-size: 16px;
       line-height: 16px;
-      color: #666666;
+      color: $font_color_66;
     }
   }
   .dried_food_case{
@@ -1872,7 +1872,7 @@ body{
       display: block;
       font-size: 12px;
       line-height: 18px;
-      color: #666666;
+      color: $font_color_66;
     }
     >div{
       cursor:pointer;
@@ -1931,7 +1931,7 @@ body{
     width: 1200px;
     margin: 20px 0 17px;
     a,span {
-      color: #666666;
+      color: $font_color_66;
       cursor: pointer;
     }
   }
@@ -1965,7 +1965,7 @@ body{
         display: flex;
         margin-right: 99px;
         p {
-          color: #666666;
+          color: $font_color_66;
           margin-left: 15px;
         }
         
@@ -1994,7 +1994,7 @@ body{
           color: $auxiliary_color_FF;
         }
         .validity {
-          color: #666666;
+          color: $font_color_66;
           margin-top: 10px;
         }
       }
@@ -2055,7 +2055,7 @@ body{
     .balance_title {
       padding-top: 18px;
       .account_detail {
-        color: #666;
+        color: $font_color_66;
         cursor: pointer;
         &:hover span {
           color: #E0473E;
@@ -2143,7 +2143,7 @@ body{
     }
   }
   .discription {
-    color: #666666;
+    color: $font_color_66;
     margin-bottom: 40px;
   }
 }
@@ -2190,7 +2190,7 @@ body{
   overflow: auto;
   .table_content {
     span {
-      color: #666666;
+      color: $font_color_66;
       padding-top: 10px;
     }
   }
@@ -2207,40 +2207,6 @@ body{
     font-size: 18px;
     line-height: 27px;
     font-weight: bold;
-  }
-  .flex_layout {
-    display: flex;
-    margin: 10px 0 45px;
-    img {
-      width: 232px;
-      height: 130px;
-    }
-    .content {
-      margin-left: 20px;
-      >p {
-        margin-bottom: 17px;
-      }
-      .service_detail {
-        width: 220px;
-        display: flex;
-        margin-bottom: 10px;
-        justify-content: space-between;
-        p {
-          font-size: 14px;
-          line-height: 21px;
-        }
-        .price {
-          color: #E0473E;
-        }
-        .account_input {
-          width: 80px !important;
-          line-height: 22px !important;
-          p:not(:nth-child(2)) {
-            width: 20px !important;
-          }
-        }
-      }
-    }
   }
   .swiper-container {
     .swiper-wrapper {
@@ -2272,13 +2238,10 @@ body{
         font-weight: bold;
         line-height: 21px;
       }
-      p:first-child {
-        // margin-right: 16px;
-      }
       .money_off {
-        color: #666;
         font-size: 12px;
         line-height: 15px;
+        color: $font_color_66;
       }
     }
     .swiper-button-prev {
@@ -2310,6 +2273,41 @@ body{
     }
   }
 }
+
+.flex_layout {
+  display: flex;
+  margin: 10px 0 45px;
+  img {
+    width: 232px;
+    height: 130px;
+  }
+  .content {
+    margin-left: 20px;
+    >p {
+      margin-bottom: 17px;
+    }
+    .service_detail {
+      width: 220px;
+      display: flex;
+      margin-bottom: 10px;
+      justify-content: space-between;
+      p {
+        font-size: 14px;
+        line-height: 21px;
+      }
+      .price {
+        color: #E0473E;
+      }
+      .account_input {
+        width: 80px !important;
+        line-height: 22px !important;
+        p:not(:nth-child(2)) {
+          width: 20px !important;
+        }
+      }
+    }
+  }
+}
 .problem_case {
   .service_tips {
     margin-bottom: 10px !important;
@@ -2322,7 +2320,7 @@ body{
       margin-right: 6px;
     }
     span {
-      color: #666;
+      color: $font_color_66;
     }
     a {
       color: #0087ff;
@@ -2330,5 +2328,23 @@ body{
     span,a {
       font-size: 14px;
     }
+  }
+}
+.pay_price {
+  width: 1200px;
+  height: 144px;
+  background: #fff;
+  padding: 20px 38px;
+  margin: 0 auto 20px;
+  .order_number {
+    color: $font_color_66;
+    margin-bottom: 20px !important;
+  }
+  img {
+    width: 186px;
+    height: 104px;
+  }
+  .service_detail {
+    width: 100% !important;
   }
 }
