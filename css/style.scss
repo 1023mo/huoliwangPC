@@ -128,10 +128,14 @@ body{
   background: $bg_with_2;
   box-shadow: 2px 2px 4px rgba(102, 102, 102, 0.15);
   border-radius: 4px;
-  img,p{
+  .icon,p{
     display: inline-block;
     vertical-align: middle;
     line-height: 94px;
+  }
+  .icon{
+    width: 34px;
+    height: 34px;
   }
   p{
     color: $font_color_33;
@@ -185,6 +189,10 @@ body{
       display: none;
     }
   }
+  .default,.hover,.select{
+    width: 22px;
+    height: 22px;
+  }
   li.active,li.active:hover{
     .default,.hover{
       display: none;
@@ -234,6 +242,9 @@ body{
   li{
     cursor:pointer;
     position: relative;
+    .icon{
+      font-size: 28px;
+    }
     .tip{
       position: absolute;
       left: 0;
@@ -412,9 +423,17 @@ body{
   justify-content: center;
 }
 //头部
+.header_case{
+  height: 70px;
+  position: relative;
+  z-index: 1000000000000000000;
+}
 .header {
   width: 100%;
+  position: fixed;
+  top: 0;
   height: 70px;
+  z-index: 1000000000000000000;
   background: #FFFFFF;
   .header-menu {
     height: 70px;
@@ -461,6 +480,7 @@ body{
   }
   .navigation{
     p{
+      color: #fff;
       font-weight: bold;
       font-size: $font_16;
       margin-bottom: 15px;
@@ -531,8 +551,10 @@ body{
     font-size: 16px;
     padding: 180px 40px 110px 40px;
     position: relative;
-    >img{
+    .logo{
       position: absolute;
+      width: 133px;
+      height: 42px;
       top: 74px;
       left: 50%;
       -webkit-transform: translateX(-50%);
@@ -544,19 +566,23 @@ body{
     >ul{
       li{
         font-size: 0;
-        img,div{
+        .icon_img,div{
           display: inline-block;
           vertical-align: middle;
         }
-        img{
+        .icon_img{
           margin-right: 14px;
+          width: 44px;
+          height: 44px;
         }
         div{
           h3{
+            color: $font_color_ff;
             font-size: $font_14;
             margin-bottom: 7px;
           }
           p{
+            color: $font_color_ff;
             font-size: $font_12;
           }
         }
@@ -630,9 +656,13 @@ body{
             border-radius: $radius;
             font-size: 0;
             padding: 11px 20px 11px 17px;
-            img,span,input{
+            .img,span,input{
               display: inline-block;
               vertical-align: middle;
+            }
+            .img{
+              width: 22px;
+              height: 22px;
             }
             input{
               font-size: $font_14;
@@ -686,18 +716,18 @@ body{
               -ms-transform: translateY(-50%);
               -o-transform: translateY(-50%);
               transform: translateY(-50%);
-              img:last-child{
+              .img:last-child{
                 display: none!important;
               }
-              img:first-child{
+              .img:first-child{
                 display: block!important;
               }
             }
             .swich_type.active{
-              img:last-child{
+              .img:last-child{
                 display: block!important;
               }
-              img:first-child{
+              .img:first-child{
                 display: none!important;
               }
             }
@@ -743,7 +773,9 @@ body{
       font-size: $font_14;
       padding-left: 0px;
       position: relative;
-      img{
+      .img{
+        width: 18px;
+        height: 18px;
         position: absolute;
         left: -9px;
       }
@@ -791,6 +823,7 @@ body{
 }
 // 协议
 .agreement{
+  margin-top: 20px;
   padding: 33px 20px 18px;
   >p{
     text-align: center;
@@ -894,10 +927,10 @@ body{
   }
 }
 .index_bg_img_1{
-  background: url(../images/index_bg_1.svg) center center no-repeat;
+  background: url(../imagesPng/index_bg_1.png) center center no-repeat;
 }
 .index_bg_img_2{
-  background: url(../images/index_bg_2.svg) center center no-repeat;
+  background: url(../imagesPng/index_bg_2.png) center center no-repeat;
 }
 .template_index_tool{
   padding: 70px 0 200px;
@@ -915,12 +948,58 @@ body{
 .template_index_potential_2{
   padding-top: 75px;
   padding-bottom: 83px;
+  .potential_list{
+    display: inline-block;
+    padding-left: 95px;
+    vertical-align: middle;
+    >div:not(:last-child){
+      margin-bottom: 115px;
+    }
+    >div{
+      font-size: 0;
+      div,h3{
+        display: inline-block;
+        vertical-align: middle;
+      }
+      h3{
+        font-weight: bold;
+        font-size: 80px;
+        line-height: 85px;
+        color: #E0473E;
+        padding-right: 30px;
+      }
+      div{
+        :first-child{
+          font-size: 18px;
+          line-height: 27px;
+          margin-bottom: 10px;
+          color: #333;
+        }
+        :last-child{
+          font-size: 16px;
+          line-height: 24px;
+          color: #666;
+        }
+      }
+    }
+  }
 }
 .template_index_bank{
   padding: 70px 0 60px;
   img{
-    display: block;
-    margin: 60px auto 0;
+    display: inline-block;
+    margin-right: 22px;
+    width: 180px;
+    height: 90px;
+    margin-bottom: 20px;
+  }
+  img:nth-child(6n+6) {
+    margin-right: 0;
+  }
+  .banks{
+    text-align: center;
+    font-size: 0;
+    padding-top: 58px;
   }
 }
 .template_index_dynamic{
@@ -1102,7 +1181,8 @@ body{
             top: -2px;
             background: rgba(51, 51, 51, 0.4);
             img{
-              width: 120px;
+              width: 90px;
+              height: 90px;
               position: absolute;
               left: 50%;
               top: 50%;
@@ -1526,7 +1606,7 @@ body{
       position: absolute;
       left: 0;
       top: 50%;
-      background: url(../images/icon_fujian.svg) center center no-repeat;
+      background: url(../imagesPng/icon/icon_fujian.svg) center center no-repeat;
       background-size: 100% 100%;
       -webkit-transform: translateY(-50%);
       -moz-transform: translateY(-50%);
@@ -1554,10 +1634,14 @@ body{
   padding: 7px 10px  7px;
   border-radius: 50%;
   margin-bottom: 40px;
-  img,i{
+  .icon,i{
       display: block;
     margin: 0 auto;
     text-align: center;
+  }
+  .icon{
+    width: 28px;
+    height: 28px;
   }
   i{
     margin-top: 3px;
@@ -1649,6 +1733,7 @@ body{
     }
   }
   .comment_main{
+    margin-bottom: 10px;
     >img{
       width: 60px;
       height: 60px;
@@ -1684,11 +1769,11 @@ body{
   }
   .comment_msg{
     text-align: right;
-    img,span,a,p{
+    .icon,span,a,p{
       display: inline-block;
       vertical-align: middle;
     }
-    img{
+    .icon{
       width: 23px;
       height: 23px;
       margin-right: 6px;
@@ -1706,7 +1791,7 @@ body{
       font-size: $font_14;
       padding-top: 6px;
     }
-    img.active{
+    .icon.active{
       display: none;
     }
     p.active{
@@ -1719,7 +1804,7 @@ body{
     }
   }
   .comment_reply{
-    padding: 10px 0 10px 10px;
+    padding: 10px 0 0px 10px;
     label{
       color: $auxiliary_color_2B;
     }
@@ -1751,6 +1836,88 @@ body{
     font-size: 18px;
     line-height: 27px;
     color: #333333;
+  }
+}
+// 干货合集
+.dried_food{
+  font-size: 0;
+  text-align: center;
+  padding-bottom: 40px;
+  .dried_food_title{
+    display: inline-block;
+    vertical-align: middle;
+    span,label{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    span{
+      font-size: 26px;
+      line-height: 39px;
+      color: #333333;
+      margin-right: 20px;
+    }
+    label{
+      font-size: 16px;
+      line-height: 16px;
+      color: #666666;
+    }
+  }
+  .dried_food_case{
+    .icon{
+      width: 22px;
+      height: 22px;
+      margin: 0 auto;
+    }
+    i{
+      display: block;
+      font-size: 12px;
+      line-height: 18px;
+      color: #666666;
+    }
+    >div{
+      cursor:pointer;
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      .show{
+        display: none;
+      }
+    }
+    >div:first-child{
+      margin-right: 20px;
+    }
+    .hover,.select{
+      display: none;
+    }
+    >div:hover{
+      .hover{
+        display: block;
+        width: 22px;
+        height: 22px;
+      }
+      .default{
+        display: none;
+      }
+      .show{
+        display: block;
+        position: absolute;
+        z-index: 100000000;
+        left: 0%;
+        -webkit-transform: translateX(-38%);
+        -moz-transform: translateX(-38%);
+        -ms-transform: translateX(-38%);
+        -o-transform: translateX(-38%);
+        transform: translateX(-38%);
+      }
+    }
+    >div.active{
+      .default,.hover{
+        display: none;
+      }
+      .select{
+        display: block;
+      }
+    }
   }
 }
 // 服务商城
