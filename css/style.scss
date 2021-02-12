@@ -2209,14 +2209,16 @@ body{
     font-weight: bold;
   }
   .swiper-container {
-    .swiper-wrapper {
-      width: 674px;
-      overflow: hidden;
-    }
+    margin-left: 35px;
+    margin-right: 35px;
+    overflow: hidden;
+    width: auto;
     .swiper-slide,.icon {
       height: 60px;
       position: relative;
       width: 146px !important;
+      margin-left: 15px;
+      padding-right: 15px;
     }
     .active {
       display: none;
@@ -2245,12 +2247,12 @@ body{
       }
     }
     .swiper-button-prev {
-      left: 0 !important;
+      left: -30px !important;
       background-image: url('../imagesPng/icon/arrow_left.png') !important;
       background-size: auto 23px;
     }
     .swiper-button-next {
-      right: 0 !important;
+      right: -30px  !important;
       background-image: url('../imagesPng/icon/arrow_right.png') !important;
       background-size: auto 23px;
     }

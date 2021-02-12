@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>订阅服务</title>
 </head>
 <body>
@@ -45,11 +46,14 @@
             </section>
           </div>
           <!-- 优惠券 -->
-          <div class="swiper-container flex_center">
-            <div class="swiper-wrapper"></div>
+          <div style="position: relative">
+            <div class="swiper-container">
+              <div class="swiper-wrapper"></div>
+            </div>
             <div class="swiper-button-next" onclick="next()"></div>
             <div class="swiper-button-prev" onclick="prev()"></div>
           </div>
+
           <!-- 应付金额 -->
           <section class="money flex_between">
             <p>应付金额<span>¥798元</span></p>
@@ -224,11 +228,16 @@
 <script src="js/swiper.min.js"></script>
 <script src="js/main.js"></script>
 <script>
-  (function(){
     //获取金栗明细数据后调用该方法显示明细列表详情
     getDetailData()
     getCoupons()
-  })()
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 4,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        }
+    });
   function showDetail() {
     $('.detail_mask').show()
   }
@@ -272,15 +281,6 @@
     }
     $('.table_content').append(frag)
   }
-  var swiper = new Swiper('.swiper-container', {
-      loop: true,
-      slidesPerView: 4,
-      spaceBetween: 30,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      }
-  });
   function getCoupons() {
     var html = '',
         coupons = [
@@ -304,8 +304,9 @@
                 </p>
               </div>
             </div>`
-      $('.swiper-wrapper').append(html)
     }
+      console.log(html);
+      $('.swiper-wrapper').html(html)
   }
   function selectCoupons(which) {
     $(which).siblings().children('svg').children('use').attr('xlink:href','#icon-Coupons31')
@@ -313,7 +314,7 @@
     useNode.attr('xlink:href') == "#icon-Coupons31"?useNode.attr('xlink:href','#icon-Coupons21'):useNode.attr('xlink:href','#icon-Coupons31')
   }
   function prev() {
-    swiper.slidePrev();
+      swiper.slidePrev();
   }
   function next() {
     swiper.slideNext();
