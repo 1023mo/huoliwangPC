@@ -284,12 +284,16 @@
   function getCoupons() {
     var html = '',
         coupons = [
+          {price: '¥200',num:'500'},
+          {price: '¥200',num:'600'},
+          {price: '¥200',num:'700'},
+          {price: '¥200',num:'800'},
+          {price: '¥200',num:'900'},
           {price: '¥200',num:'1000'},
-          {price: '¥200',num:'1000'},
-          {price: '¥200',num:'1000'},
-          {price: '¥200',num:'1000'},
-          {price: '¥200',num:'1000'},
-          {price: '¥200',num:'1000'}
+          {price: '¥200',num:'1100'},
+          {price: '¥200',num:'1200'},
+          {price: '¥200',num:'1300'},
+          {price: '¥200',num:'1400'}
         ]
     for(var i=0; i<coupons.length;i++) {
       html+=`<div class="swiper-slide" onclick="selectCoupons(this)">
@@ -305,8 +309,7 @@
               </div>
             </div>`
     }
-      console.log(html);
-      $('.swiper-wrapper').html(html)
+    $('.swiper-wrapper').html(html)
   }
   function selectCoupons(which) {
     $(which).siblings().children('svg').children('use').attr('xlink:href','#icon-Coupons31')
