@@ -36,6 +36,7 @@ $radius: 4px;
 //通用部分
 body{
   font-size: 12px;
+  min-width: 1200px;
 }
 .bg_34{
   background: $bg_34;
@@ -416,12 +417,6 @@ body{
     transform: translate(-50%,-50%);
   }
 }
-//公用居中显示
-.flex_center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 //头部
 .header_case{
   height: 70px;
@@ -435,13 +430,15 @@ body{
   position: fixed;
   background: #FFFFFF;
   z-index: 1000000000000000000;
-  .header-menu {
+  .header_menu {
     height: 70px;
+    min-width: 900px;
     line-height: 70px;
+    white-space: nowrap;
     img {
       margin-right: 27px;
     }
-    span {
+    a {
       width: 140px;
       font-size: 18px;
       cursor: pointer;
@@ -457,6 +454,7 @@ body{
   .login-register-btns {
     font-size: 16px;
     line-height: 70px;
+    white-space: nowrap;
     margin: 0 30px 0 102px;
   }
   .avatar {
@@ -1920,7 +1918,18 @@ body{
     }
   }
 }
+
 // 服务商城
+//公用class
+.flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex_between {
+  display: flex;
+  justify-content: space-between;
+}
 .store-banner {
   width: 100%;
 }
@@ -1929,7 +1938,7 @@ body{
   flex-direction: column;
   .bread_menu {
     width: 1200px;
-    margin: 20px 0 17px;
+    padding: 20px 0;
     a,span {
       color: $font_color_66;
       cursor: pointer;
@@ -2127,9 +2136,7 @@ body{
     position: absolute;
   }
   .flex_between {
-    display: flex;
     margin-top: 34px;
-    justify-content: space-between;
     .title {
       font-size: 18px;
       line-height: 46px;
@@ -2203,25 +2210,29 @@ body{
   position: relative;
   margin:0 40px 40px 0;
   background: #FFFFFF;
+  .flex_layout {
+    margin: 10px 0 45px;
+    img {
+      width: 232px;
+      height: 130px;
+    }
+  }
   .service_title {
     font-size: 18px;
     line-height: 27px;
     font-weight: bold;
   }
   .swiper-container {
-    margin-left: 35px;
-    margin-right: 35px;
     overflow: hidden;
-    width: auto;
+    display: flex;
+    width: 674px;
+    .swiper-slide {
+      margin-right: 28px;
+    }
     .swiper-slide,.icon {
       height: 60px;
       position: relative;
       width: 146px !important;
-      margin-left: 15px;
-      padding-right: 15px;
-    }
-    .active {
-      display: none;
     }
     .coupons {
       top: 0;
@@ -2246,16 +2257,18 @@ body{
         color: $font_color_66;
       }
     }
-    .swiper-button-prev {
-      left: -30px !important;
-      background-image: url('../imagesPng/icon/arrow_left.png') !important;
-      background-size: auto 23px;
-    }
-    .swiper-button-next {
-      right: -30px  !important;
-      background-image: url('../imagesPng/icon/arrow_right.png') !important;
-      background-size: auto 23px;
-    }
+  }
+  .swiper-button-prev {
+    width: 23px !important;
+    left: -10px !important;
+    background-image: url('../imagesPng/icon/arrow_left.png') !important;
+    background-size: auto 23px;
+  }
+  .swiper-button-next {
+    width: 23px !important;
+    right: -3px  !important;
+    background-image: url('../imagesPng/icon/arrow_right.png') !important;
+    background-size: auto 23px;
   }
   .money {
     display: flex;
@@ -2267,8 +2280,8 @@ body{
       line-height: 44px;
     }
     span {
-      color: #E0473E;
       margin-left: 20px;
+      color: $main_color;
     }
     a {
       width: 140px;
@@ -2278,11 +2291,6 @@ body{
 
 .flex_layout {
   display: flex;
-  margin: 10px 0 45px;
-  img {
-    width: 232px;
-    height: 130px;
-  }
   .content {
     margin-left: 20px;
     >p {
@@ -2298,7 +2306,7 @@ body{
         line-height: 21px;
       }
       .price {
-        color: #E0473E;
+        color: $main_color;
       }
       .account_input {
         width: 80px !important;
@@ -2336,17 +2344,102 @@ body{
   width: 1200px;
   height: 144px;
   background: #fff;
-  padding: 20px 38px;
   margin: 0 auto 20px;
+  padding: 15px 38px 20px;
+  .flex_layout {
+    align-items: center;
+    img {
+      width: 186px;
+      height: 104px;
+    }
+  }
   .order_number {
     color: $font_color_66;
     margin-bottom: 20px !important;
   }
-  img {
-    width: 186px;
-    height: 104px;
-  }
-  .service_detail {
+  .order_content {
     width: 100% !important;
+    .order_title {
+      font-weight: 500;
+      margin: 0 0 17px -8px;
+      line-height: 30px !important;
+    }
+    .order_price {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 30px;
+      color: $main_color;
+      margin-bottom: 17px;
+    }
+    .font_size_14,.font_size_14 span {
+      color: $font_color_66;
+    }
+    .count_down {
+      color: $main_color !important;
+    }
+  }
+}
+.pay_code {
+  width: 1200px;
+  height: 296px;
+  margin-bottom: 20px;
+  background: #FFFFFF;
+  .title {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: bold;
+    margin: 20px 0 0 40px;
+  }
+  .code {
+    height: 114px;
+    position: relative;
+    background: url('../imagesPng/QR_code.png') center center no-repeat;
+    background-size: 114px 114px;
+    p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 16px;
+      font-weight: 500;
+      margin-left: 70px;
+      margin-top: -16px;
+      line-height: 24px;
+    }
+    p:nth-child(2) {
+      margin-top: 8px;
+      color: $main_color;
+    }
+    .code_mask {
+      width: 114px;
+      height: 114px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -57px;
+      background: rgba(153, 153, 153, 0.6);
+    }
+  }
+  .tips {
+    text-align: center;
+    margin-bottom: 10px;
+    color: $font_color_66;
+  }
+}
+.pay_success {
+  margin-top: 77px;
+  flex-direction: column;
+  img {
+    width: 116px;
+    height: 116px;
+  }
+  .success_tips {
+    font-size: 18px;
+    line-height: 27px;
+    margin: 34px 0 73px;
+    span {
+      font-size: 18px;
+      line-height: 27px;
+      color: $main_color;
+    }
   }
 }
