@@ -11,13 +11,13 @@
   <body>
     <div class="header_case">
       <section class="header flex_center">
-        <div class="header-menu">
+        <div class="header_menu">
           <img src="./imagesPng/icon/logo black.png">
-          <span class="active">首页</span>
-          <span>栗学院</span>
-          <span>行业数据</span>
-          <span>资讯干货</span>
-          <span>服务商城</span>
+          <a class="active" href="./index.html">首页</span>
+          <a href="#">栗学院</a>
+          <a>行业数据</a>
+          <a>资讯干货</a>
+          <a href="./store.html">服务商城</a>
         </div>
         <div class="login-register-btns">
           <span>登陆</span>
@@ -34,8 +34,12 @@
     <script src="http://at.alicdn.com/t/font_2361919_g6f54c3besr.js"></script>
     <script src="js/jquery-1.12.2.min.js"></script>
     <script>
-      $('.header-menu span').click(function() {
-        $(this).addClass('active').siblings().removeClass('active')
+      $(document).ready(function(){ 
+        $(".header_menu a").each(function(){ 
+          if($(this)[0].href==String(window.location)){ 
+            $(this).addClass("active").siblings().removeClass("active"); 
+          } 
+        }); 
       })
     </script>
   </body>
