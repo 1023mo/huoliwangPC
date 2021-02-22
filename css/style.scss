@@ -37,6 +37,7 @@ $radius: 4px;
 body{
   font-size: 12px;
   min-width: 1200px;
+  padding-top: 70px;
 }
 .bg_34{
   background: $bg_34;
@@ -426,11 +427,6 @@ body{
   }
 }
 //头部
-.header_case{
-  height: 70px;
-  position: relative;
-  z-index: 1000000000000000000;
-}
 .header {
   top: 0;
   width: 100%;
