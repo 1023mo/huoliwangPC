@@ -2244,53 +2244,51 @@ body{
     line-height: 27px;
     font-weight: bold;
   }
-  .swiper-container {
-    overflow: hidden;
-    display: flex;
-    width: 674px;
-    .swiper-slide {
-      margin-right: 28px;
-    }
-    .swiper-slide,.icon {
-      height: 60px;
-      position: relative;
-      width: 146px !important;
-    }
-    .coupons {
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      display: flex;
-      cursor: pointer;
-      position: absolute;
-      align-items: center;
-      padding: 0 18px 0 6px;
-      justify-content: space-between;
-      p,span {
-        font-size: 14px;
-        color: #E0473E;
-        font-weight: bold;
-        line-height: 21px;
+  .swiper {
+    position: relative;
+    .swiper-container {
+      width: 674px;
+      position: static;
+      .swiper-slide,.icon {
+        height: 60px;
+        position: relative;
+        width: 146px !important;
       }
-      .money_off {
-        font-size: 12px;
-        line-height: 15px;
-        color: $font_color_66;
+      .swiper-button-next:after,
+      .swiper-button-prev:after {
+        font-size: 16px;
+        color: #999999 !important;
+      }
+      .swiper-button-next {
+        right: -9px !important;
+      }
+      .swiper-button-prev {
+        left: -9px !important;
+      }
+      .coupons {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        cursor: pointer;
+        position: absolute;
+        align-items: center;
+        padding: 0 18px 0 6px;
+        justify-content: space-between;
+        p,span {
+          font-size: 14px;
+          color: #E0473E;
+          font-weight: bold;
+          line-height: 21px;
+        }
+        .money_off {
+          font-size: 12px;
+          line-height: 15px;
+          color: $font_color_66;
+        }
       }
     }
-  }
-  .swiper-button-prev {
-    width: 23px !important;
-    left: -10px !important;
-    background-image: url('../images/icon/arrow_left.png') !important;
-    background-size: auto 23px;
-  }
-  .swiper-button-next {
-    width: 23px !important;
-    right: -3px  !important;
-    background-image: url('../images/icon/arrow_right.png') !important;
-    background-size: auto 23px;
   }
   .money {
     display: flex;
