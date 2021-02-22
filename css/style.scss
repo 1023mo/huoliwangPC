@@ -937,10 +937,10 @@ body{
   }
 }
 .index_bg_img_1{
-  background: url(../imagesPng/index_bg_1.png) center center no-repeat;
+  background: url(../images/index_bg_1.png) center center no-repeat;
 }
 .index_bg_img_2{
-  background: url(../imagesPng/index_bg_2.png) center center no-repeat;
+  background: url(../images/index_bg_2.png) center center no-repeat;
 }
 .template_index_tool{
   padding: 70px 0 200px;
@@ -1626,7 +1626,7 @@ body{
       position: absolute;
       left: 0;
       top: 50%;
-      background: url(../imagesPng/icon/icon_fujian.svg) center center no-repeat;
+      background: url(../images/icon/icon_fujian.svg) center center no-repeat;
       background-size: 100% 100%;
       -webkit-transform: translateY(-50%);
       -moz-transform: translateY(-50%);
@@ -2070,7 +2070,7 @@ body{
     .user_status {
       height: 60px;
       padding-left: 76px;
-      background: url('../imagesPng/Avatar5.png') left center no-repeat;
+      background: url('../images/Avatar5.png') left center no-repeat;
       background-size: 60px 60px;
       .not_login {
         cursor: pointer;
@@ -2283,13 +2283,13 @@ body{
   .swiper-button-prev {
     width: 23px !important;
     left: -10px !important;
-    background-image: url('../imagesPng/icon/arrow_left.png') !important;
+    background-image: url('../images/icon/arrow_left.png') !important;
     background-size: auto 23px;
   }
   .swiper-button-next {
     width: 23px !important;
     right: -3px  !important;
-    background-image: url('../imagesPng/icon/arrow_right.png') !important;
+    background-image: url('../images/icon/arrow_right.png') !important;
     background-size: auto 23px;
   }
   .money {
@@ -2415,7 +2415,7 @@ body{
   .code {
     height: 114px;
     position: relative;
-    background: url('../imagesPng/QR_code.png') center center no-repeat;
+    background: url('../images/QR_code.png') center center no-repeat;
     background-size: 114px 114px;
     p {
       position: absolute;
