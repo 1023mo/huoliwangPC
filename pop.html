@@ -251,6 +251,15 @@
     $('.wechat').click(function () {
         $(this).parents('.basics_case').next().next().show().siblings().hide()
     })
+    // 判断登陆或是注册
+    if (getQueryString('register')) {
+        $('.register').hide();
+        $('.register_case').show().prev().hide();
+        $('.password_case').hide()
+        $('.seend_case').show()
+        $('.wechat').hide()
+        $('.tip_text').show()
+    }
 </script>
 </body>
 </html>
