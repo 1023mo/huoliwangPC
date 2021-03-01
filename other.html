@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <meta charset="UTF-8">
+    <title>火栗网</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="header"></div>
+<div class="bg_with_3 other_case">
+    <div class="content">
+        <ul class="template_link">
+            <a href="index.html">首页</a> >
+            <a href="javascript:;">合作办课</a>
+        </ul>
+        <div class="other_main">
+            <div class="input_msgs">
+                <p class="title_type">合作办课</p>
+                <ul>
+                    <li>
+                        <span>您的称呼</span>
+                        <input placeholder="王先生" type="text">
+                    </li>
+                    <li>
+                        <span>联系方式</span>
+                        <input placeholder="电话、邮箱等" type="text">
+                    </li>
+                    <li>
+                        <span>具体需求</span>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="请输入您的具体需求……"></textarea>
+                    </li>
+                </ul>
+                <a class="template_btn_red template_btn_standard" href="javascript:;">提交</a>
+            </div>
+            <div class="other_list clearfix">
+                <div class="fl">
+                    <h3>商务合作 </h3>
+                    <div>
+                        <p>宣传推广</p>
+                        <ol>
+                            <li>推广资源</li>
+                            <li>价格体系</li>
+                            <li>广告位排期</li>
+                            <li>合作活动</li>
+                        </ol>
+                    </div>
+                    <div>
+                        <p>人才服务</p>
+                        <ol>
+                            <li>招聘服务</li>
+                            <li>培训方案</li>
+                            <li>企业内训</li>
+                            <li>机构交流</li>
+                        </ol>
+                    </div>
+                    <div>
+                        <p>资产处置</p>
+                        <ol>
+                            <li>推介平台</li>
+                            <li>推广资源</li>
+                            <li>合作会议</li>
+                            <li>清收对接</li>
+                        </ol>
+                    </div>
+                    <p>联系人：张女士</p>
+                    <p>微信/电话：18612213959</p>
+                </div>
+                <div class="fr">
+                    <h3>用户服务 </h3>
+                    <div>
+                        <p>互动咨询</p>
+                        <ol>
+                            <li>活动沙龙</li>
+                            <li>最新招聘</li>
+                            <li>大咖公开课</li>
+                            <li>栗谈1V1</li>
+                        </ol>
+                    </div>
+                    <div>
+                        <p>应聘讲师</p>
+                        <ol>
+                            <li>培训课程</li>
+                            <li>栗谈专家</li>
+                            <li>直播分享</li>
+                            <li>音视频资料</li>
+                        </ol>
+                    </div>
+                    <div>
+                        <p>长期学员</p>
+                        <ol>
+                            <li>报名咨询</li>
+                            <li>课程排期</li>
+                            <li>报名优惠</li>
+                            <li>学籍文件</li>
+                        </ol>
+                    </div>
+                    <p>联系人：张女士</p>
+                    <p>微信/电话：18612213959</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tip_pop tip_pop_other" style="display: none">
+    <svg class="icon default" aria-hidden="true"  >
+        <use xlink:href="#icon-OK"></use>
+    </svg>
+    <p class="first">提交成功</p>
+    <p>稍后会有工作人员与您取得联系</p>
+</div>
+<div id="footer"></div>
+<script src="js/jquery-1.12.2.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    $('#header').load('./header.html');
+    $('#footer').load('./footer.html');
+    $('.template_btn_red').click(function () {
+        if($('.tip_pop_other').css('display') == 'none'){
+            $('.tip_pop').show();
+            var time = setTimeout(function () {
+                $('.tip_pop').hide();
+                clearTimeout(time)
+                time = null
+            }, 1000)
+        }
+    })
+    var titiarr = ['合作办课','推广需求','企业团购','应聘讲师','投稿报道','投诉建议']
+    if(getQueryString('type')){
+        $('.title_type').text(titiarr[getQueryString('type')])
+    }
+</script>
+</body>
+</html>

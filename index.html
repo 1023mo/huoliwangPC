@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <title>火栗网</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -267,15 +267,17 @@
 </div>
 <div id="footer"></div>
 <script src="js/jquery-1.12.2.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
 <script src="js/main.js"></script>
-<script src="js/swiper.min.js"></script>
 <script>
     var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
+        pagination: {
+            el: '.swiper-pagination',
+        },
         paginationClickable: true,
         autoplay:1,//自动滚动
         loop:true,//循环
-        speed:4000,//滚动速度
+        speed:2000,//滚动速度
     });
     $(document).on("scroll", function (e) {
         var top = $('.index_map').offset().top

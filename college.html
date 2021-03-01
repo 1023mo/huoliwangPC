@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <meta charset="UTF-8">
-    <title>火栗网</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/swiper.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <title>火栗网</title>
 </head>
 <body>
 <div id="header"></div>
@@ -908,8 +908,8 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-button-next" onclick="next()"></div>
-            <div class="swiper-button-prev" onclick="prev()"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
         <div class="problem_case">
             <p class="curriculum_title">
@@ -954,7 +954,7 @@
 </div>
 <div id="footer"></div>
 <script src="js/jquery-1.12.2.min.js"></script>
-<script src="js/swiper.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
 <script src="js/main.js"></script>
 <script>
     $('.select_type').on('click','a',function () {
@@ -974,16 +974,11 @@
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
+            hideOnClick: false,
         }
     });
     function slideClick(e) {
         $(e).toggleClass('active')
-    }
-    function prev() {
-        swiper.slidePrev();
-    }
-    function next() {
-        swiper.slideNext();
     }
 </script>
 </body>
